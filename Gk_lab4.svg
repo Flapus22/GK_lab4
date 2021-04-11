@@ -8,21 +8,23 @@
     preserveAspectRatio="xMidYMid">
 
     <defs>
-        <g id = "polygon" stroke="black" fill="aqua" stroke-width="2">
-            <animateTransform attributeName = "transform" type = "rotate"
+        <g id = "polygon" stroke="black" fill="aqua" stroke-width="2"> <!-- Określenie id, koloru oraz krawędzi -->
+            <animateTransform attributeName = "transform" type = "rotate" 
                 from = "0" to ="360"
-                dur = "5s" repeatCount = "indefinite" />
+                dur = "5s" repeatCount = "indefinite" /> <!-- Określenie animacji -->
             <polygon points= "29,3 25,15 15,25 3,29 -9,28 -21,21 -28,9 -29,-3 -25,-15 -15,-25 -3,-29 9,-28 21,-21 28,-9">
+            <!-- stworzenie wielokąta -->
+            
         </g>
-        <g id = "line" stroke-width="10" >
+        <g id = "line" stroke-width="10" > <!-- Określenie id, wilekości krawędzi  -->
             <line x1="-100" x2="100" y1="0" y2="0"/>
         </g>
         
-        <g id = "triangle">
+        <g id = "triangle"> <!-- stworzenie Trójkąta -->
             <polygon points="0,-100 86.6,50 -86.6,50" />
         </g>
     
-        <g id = "object">
+        <g id = "object"> <!-- Stworzenie jednego pełnego Obiektu -->
             <use xlink:href="#polygon" transform="rotate(20) translate(80,0)"/>
             <use xlink:href="#polygon" transform="rotate(20) translate(-80,0)"/>
             <use xlink:href="#line" transform = "rotate(20) scale(0.8,1)" stroke = "red"/>
@@ -30,7 +32,8 @@
         </g>
     </defs>
     
-        <use xlink:href="#object" transform="translate(190,250) scale(0.7)" fill="blue"/>
+        <!-- Stworzeni obiektów na scenie -->
+        <use xlink:href="#object" transform="translate(190,250) scale(0.7)" fill="blue"/> 
         <use xlink:href="#object" transform="translate(50,150) scale(0.65)" fill="purple" />
         <use xlink:href="#object" transform="translate(300,150) scale(0.6)" fill="green"/>    
 </svg>
